@@ -11,7 +11,7 @@ class Home extends React.Component {
   }
   render() {
     return (
-      <View>
+      <View style={{ backgroundColor: 'white' }}>
         <View style={{backgroundColor: 'gray', height: 40}}/>
         <View>
           <View style={{

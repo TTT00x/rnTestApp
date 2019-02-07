@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, ScrollView, Text, Image, Dimensions} from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 
 export default class MorningView extends React.Component {
   render() {
@@ -18,12 +19,11 @@ export default class MorningView extends React.Component {
               width: imageWidth
             }}
           />
-          <View style={{
-            height: 300,
-            backgroundColor: 'black'
-          }}>
-
-          </View>
+          <LinearGradient
+            colors={['#deeaf0', '#d2e6ef', '#8bcfef']}
+            style={{ height: 300 }}
+          >
+          </LinearGradient>
         </ScrollView>
       </View>
     )

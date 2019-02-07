@@ -11,7 +11,10 @@ class Home extends React.Component {
   }
   render() {
     return (
-      <View style={{ backgroundColor: 'white' }}>
+      <View style={{
+        flex: 1,
+        backgroundColor: 'white'
+      }}>
         <View style={{backgroundColor: 'gray', height: 40}}/>
         <View>
           <View style={{
@@ -28,8 +31,8 @@ class Home extends React.Component {
             />
           </View>
           { this.layout() }
-          <View style={{backgroundColor: 'gray', height: 40}}/>
         </View>
+        <View style={{backgroundColor: 'gray', height: 40}}/>
       </View>
     );
   }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, ScrollView, Text, Image, Dimensions} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import Weather from './Weather';
 
 export default class MorningView extends React.Component {
   render() {
@@ -9,8 +10,14 @@ export default class MorningView extends React.Component {
     const imageWidth = dimensions.width;
     return (
       <View>
-        <Text>Good Morning!</Text>
-        <ScrollView>
+        <Text style={{
+          height: 50
+        }}>Good Morning!</Text>
+        <ScrollView
+          style={{
+            height: dimensions.height - 180
+          }}
+          bounces={false}>
           <Text>Date</Text>
           <Image
             source={require('../assets/main.png' )}
@@ -21,8 +28,17 @@ export default class MorningView extends React.Component {
           />
           <LinearGradient
             colors={['#deeaf0', '#d2e6ef', '#8bcfef']}
-            style={{ height: 300 }}
+            style={{
+              flex: 1,
+              alignItems: 'center',
+              paddingTop: 20,
+              paddingBottom: 20,
+            }}
           >
+            <Text>!!! Tips !!!</Text>
+            <Weather/>
+            <Weather/>
+            <Weather/>
           </LinearGradient>
         </ScrollView>
       </View>

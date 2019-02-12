@@ -27,7 +27,7 @@ export default class Weather extends React.Component {
   render() {
     return (
       <View style={{
-        height: 100,
+        height: 200,
         width: '100%',
         marginBottom: 30,
       }}>
@@ -53,7 +53,7 @@ export default class Weather extends React.Component {
             }}>Weather</Text>
           </View>
           <View style={{
-            height: 50,
+            height: 150,
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'space-between',

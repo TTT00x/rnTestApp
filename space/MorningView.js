@@ -27,7 +27,7 @@ export default class MorningView extends React.Component {
             }}
           />
           <LinearGradient
-            colors={['#deeaf0', '#d2e6ef', '#8bcfef']}
+            colors={['#DFEAEF', '#BECFEC']}
             style={{
               flex: 1,
               alignItems: 'center',

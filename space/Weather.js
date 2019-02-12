@@ -6,7 +6,7 @@ export default class Weather extends React.Component {
     super(props)
     this.state = {
       fadeAnim: new Animated.Value(0),
-      position: new Animated.ValueXY(0, -50),
+      positionY: new Animated.Value(-50),
       twirl: new Animated.Value(0)
     }
   }
@@ -16,15 +16,15 @@ export default class Weather extends React.Component {
       vy: 10000
     }
     Animated.parallel([
-      Animated.timing(this.state.position, {
-        toValue: {x: 0, y: 20},
-        duration: 300,
-        delay: 200
+      Animated.spring(this.state.positionY, {
+        toValue: 20,
+        speed: 5,
+        delay: this.props.animationDelay
       }),
       Animated.timing(this.state.fadeAnim, {
         toValue: 1,
-        duration: 300,
-        delay: 200
+        duration: 500,
+        delay: this.props.animationDelay
       }),
     ]).start();
   }
@@ -40,7 +40,7 @@ export default class Weather extends React.Component {
           width: '90%',
           opacity: this.state.fadeAnim,
           position: 'absolute',
-          top: this.state.position.y,
+          top: this.state.positionY,
           left: '5%'
         }}>
           <View style={{

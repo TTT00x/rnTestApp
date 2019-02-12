@@ -6,25 +6,21 @@ export default class Weather extends React.Component {
     super(props)
     this.state = {
       fadeAnim: new Animated.Value(0),
-      positionY: new Animated.Value(-50),
+      positionY: new Animated.Value(-30),
       twirl: new Animated.Value(0)
     }
   }
   componentDidMount() {
-    const gestureState = {
-      vx: 10000,
-      vy: 10000
-    }
     Animated.parallel([
-      Animated.spring(this.state.positionY, {
+      Animated.timing(this.state.positionY, {
         toValue: 20,
-        speed: 5,
+        duration: 400,
         delay: this.props.animationDelay
       }),
       Animated.timing(this.state.fadeAnim, {
         toValue: 1,
-        duration: 500,
-        delay: this.props.animationDelay
+        duration: 400,
+        delay: this.props.animationDelay + 100
       }),
     ]).start();
   }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Animated, View, ScrollView, Text, Image, Dimensions} from 'react-native';
+import { View, ScrollView, Text, Image, Dimensions} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import Weather from './Weather';
 
@@ -37,8 +37,8 @@ export default class MorningView extends React.Component {
           >
             <Text>!!! Tips !!!</Text>
             <Weather animationDelay={100}/>
+            <Weather animationDelay={150}/>
             <Weather animationDelay={200}/>
-            <Weather animationDelay={300}/>
           </LinearGradient>
         </ScrollView>
       </View>
